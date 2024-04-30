@@ -17,8 +17,8 @@
   padding: 0;
   margin: 0;
   background-color: rgb(99, 97, 97);
-
   display: none;
+
 }
 
 ul.dropdown-menu li:hover {
@@ -27,6 +27,24 @@ ul.dropdown-menu li:hover {
 
 .visible {
   display: block;
+  /* Expand */
+  animation: expand 500ms ease-in-out;
+  transform-origin: top;
 }
+
+  /* Expand animation keyframe */
+  @keyframes expand {
+    0% { /* This is the starting point of the animation. At 0% (the beginning), the element will have a scaleY value of 0, which means it will be vertically collapsed (no height). */
+      transform: scaleY(0);
+    }
+  
+    70% { /* At 70% of the animation duration, the element will be scaled vertically to 1.1 times its original height. This creates an overshoot effect, where the element expands slightly beyond its final size. */
+      transform: scaleY(1.1);
+    }
+    
+    100% { /* At the end of the animation (100%), the element will have a scaleY value of 1, which means it will be at its original vertical size (fully expanded).*/
+      transform: scaleY(1);
+    }
+  }
 
 
