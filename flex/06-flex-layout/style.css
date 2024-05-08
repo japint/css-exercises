@@ -1,10 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
-  height: 100vh;
+  height: 100vh; /* this makes the body exactly the same height as the viewport*/
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex; /* To stick the footer to the bottom you will need to use flex and change the direction to column.*/
+  flex-direction: column; 
+}
+
+.header, .footer{ /* */
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.footer{
+  background-color: #eeeeee;
+}
+
+.left-links, .right-links{ /* */
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.content{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 img {
@@ -16,6 +42,7 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px 16px; /* - The buttons have an appropriate amount of padding.*/
 }
 
 input {
@@ -23,4 +50,20 @@ input {
   border-radius: 16px;
   padding: 8px 24px;
   width: 400px;
+}
+
+ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+  /* this removes the dots on the list items*/
+  list-style-type: none;
+
+}
+
+a {
+  /* this removes the line under the links */
+  text-decoration: none;
+  color: #666;
 }

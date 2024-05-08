@@ -20,6 +20,10 @@ body {
   width: 480px;
   border-radius: 10px;
   box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  /* SOLUTION: */
+  display: flex;
+  gap: 16px; /* - There is equal space on either side of the icon (the gaps between the icon and the edge of the card, and the icon and the text, are the same).*/
+  padding: 16px; /* - There is padding around the edge of the modal.*/
 }
 
 .icon {
@@ -33,6 +37,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;   /* this keeps the icon from getting smashed by the text */
 }
 
 .close-button {
@@ -44,7 +49,7 @@ body {
   height: 24px;
   width: 24px;
   display: flex;
-  align-items: center;
+  align-items: center; /* - The close button is vertically aligned with the header, and aligned in the top-right of the card.*/
   justify-content: center;
   border: 1px solid #eee;
   padding: 0;
@@ -66,4 +71,16 @@ button.cancel {
   background: white;
   border: 1px solid #ddd;
   color: royalblue;
+}
+/* header container should be wrapped around the button element as well in order for flex style to work */
+.header{
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  font-size: 18px; /* - The header is bold and a slightly larger text-size than the text.*/
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.text{
+  margin-bottom: 16px;
 }

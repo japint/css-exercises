@@ -1,17 +1,27 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+    /* Solution */
+    text-align: center; /* - All items are centered on the page (horizontally, not vertically). */
 }
-
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  /* Solution */
+  margin-bottom: 32px; /* - The title is centered on the page.*/
+}
+.container{ /* add containers around the various elements so that you can flex them*/
+  /* Solution */
+  display: flex; /* - The items are arranged horizontally on the page.*/
+  justify-content: center; /* - The item text is centered.*/
+  gap: 52px; /* - There is 52px between each item.*/
+}
 img {
   width: 100px;
   height: 100px;
 }
-
-.title {
-  font-size: 36px;
-  font-weight: 900;
+.info{
+  max-width: 200px; /* - The items are only 200px wide and the text wraps.*/
 }
-
 /* do not edit this footer */
 .footer {
   position: fixed;
